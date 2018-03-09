@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<TESTCASE>
+    <QUERY>SELECT dummy FROM dual</QUERY>
+    <RESULT>
+        <ROWSET>
+            <ROW>
+                <DUMMY>X</DUMMY>
+            </ROW>
+        </ROWSET>
+    </RESULT>
+</TESTCASE>
+
+

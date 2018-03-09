@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="Testcase">
+
+    <resultMap id="testcase-map" class="dbcheck.model.domain.TestcaseBean">
+        <result property="code" column="code" jdbcType="VARCHAR" javaType="string"/>
+        <result property="description" column="description" jdbcType="VARCHAR" javaType="string"/>
+        <result property="query" column="query" jdbcType="CLOB" javaType="string"/>
+        <result property="expectedResult" column="expected_result_clob" jdbcType="CLOB" javaType="string"/>
+        <result property="enabled" column="enabled" jdbcType="VARCHAR" javaType="string"/>
+    </resultMap>
+
+    <parameterMap id="getTestcaseMap" class="map">
+        <parameter property="testcaseCode" javaType="string" jdbcType="VARCHAR" mode="IN"/>
+        <parameter property="testcaseBody" jdbcType="ORACLECURSOR" javaType="java.sql.ResultSet" mode="OUT" resultMap="testcase-map"/>
+    </parameterMap>
+
+
+    <procedure id="getTestcase" parameterMap="getTestcaseMap">
+        { call DBTEST.PKG_CORE.get_testcase(?, ?)}
+    </procedure>
+
+</sqlMap>

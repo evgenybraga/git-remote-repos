@@ -1,0 +1,13 @@
+CREATE OR REPLACE PACKAGE pkg_core IS
+  PROCEDURE get_testcase (p_code IN VARCHAR2, p_cur_testcase OUT SYS_REFCURSOR);
+END pkg_core;
+/
+CREATE OR REPLACE PACKAGE BODY pkg_core IS
+  PROCEDURE get_testcase (p_code IN VARCHAR2, p_cur_testcase OUT SYS_REFCURSOR)
+  AS
+  BEGIN
+    OPEN p_cur_testcase FOR
+    SELECT * FROM dbtest.testcase tc WHERE tc.code = p_code;
+  END;
+END pkg_core;
+/
