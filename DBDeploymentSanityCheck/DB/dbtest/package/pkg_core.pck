@@ -13,7 +13,7 @@ CREATE OR REPLACE PACKAGE BODY pkg_core IS
   AS
   BEGIN
     OPEN p_cur_testcase FOR
-    SELECT tc.code, tc.description, tc.query, tc.expected_result, tc.enabled 
+    SELECT tc.code, tc.description, tc.query, tc.expected_result.getclobval() expected_result_clob, tc.enabled 
       FROM dbtest.testcase tc 
      WHERE tc.code = p_code;
   END;

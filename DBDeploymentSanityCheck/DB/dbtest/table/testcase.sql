@@ -4,12 +4,12 @@ CREATE TABLE dbtest.testcase
 (
   id                NUMBER(21)    NOT NULL,
   code              VARCHAR2(40)  NOT NULL,
-  description       VARCHAR2(200) NOT NULL,  
+  description       VARCHAR2(200),  
   query             CLOB          NOT NULL,
   expected_result   XMLTYPE       NOT NULL,
-  enabled           VARCHAR2(1)   NOT NULL,
+  enabled           VARCHAR2(1)   NOT NULL DEFAULT 'Y',
   ins_ts            TIMESTAMP(6)  DEFAULT SYSTIMESTAMP NOT NULL,
-  modif_ts          TIMESTAMP(6)  
+  modif_ts          TIMESTAMP(6)
 )
 TABLESPACE small_data
 /

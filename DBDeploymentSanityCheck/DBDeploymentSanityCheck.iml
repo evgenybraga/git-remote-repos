@@ -25,5 +25,10 @@
     <orderEntry type="library" name="Maven: org.springframework:spring-core:2.0.8" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.xmlunit:xmlunit-core:2.5.1" level="project" />
     <orderEntry type="library" name="Maven: xmlunit:xmlunit:1.6" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-orm:3.2.9.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-jdbc:3.2.9.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-tx:3.2.9.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: commons-dbcp:commons-dbcp:1.4" level="project" />
+    <orderEntry type="library" name="Maven: commons-pool:commons-pool:1.5.4" level="project" />
   </component>
 </module>
